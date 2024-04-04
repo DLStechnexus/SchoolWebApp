@@ -64,7 +64,7 @@
                 <div class="offcanvase__banner mt--50">
                     <div class="offcanvase__banner--content">
                         <img src="assets/images/offcanvase.jpg" alt="offcanvase">
-                        <a href="admission.html" class="rts-theme-btn">Apply Now</a>
+                        {{-- <a href="javscript:void(0)" class="rts-theme-btn">Apply Now</a> --}}
                     </div>
                 </div>
                 <div class="offcanvase__info">

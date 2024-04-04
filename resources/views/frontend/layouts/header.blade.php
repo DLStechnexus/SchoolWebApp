@@ -1,4 +1,3 @@
-
 <div class="banner v__1">
     <div class="container">
         <div class="col-sm-12">
@@ -27,8 +26,7 @@
                                 </text>
                             </svg>
                             <div class="rts__circle--icon save-from-hidden">
-                                <a href="https://www.youtube.com/watch?v=7ahgosTZJHg"
-                                    class="video-play  rts-video-btn popup-video">
+                                <a href="javascript:void(0)" class="video-play  rts-video-btn popup-video">
                                     <i class="fa-sharp fa-solid fa-play"></i>
                                 </a>
                             </div>
@@ -37,7 +35,7 @@
                             <p>Remember to tailor the section names to fit the specific needs and
                                 structure of your university website.
                             </p>
-                            <a href="program-single.html" class="rts-theme-btn btn-arrow">View Our Program
+                            <a href="{{ route('home') }}" class="rts-theme-btn btn-arrow">View Our Program
                                 <span><i class="fa-regular fa-arrow-right"></i></span>
                             </a>
                         </div>
