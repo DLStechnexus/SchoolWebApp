@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Faculty</li>
                         </ul>
                         <h2 class="section-title">Faculty Directory</h2>
@@ -52,7 +52,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                                 <div class="staf-info__speciality">
                                     <p>Hospitality, Tourism, Event Management and Esports</p>
                                 </div>
-                                <a href="faculty-details.html" class="rts-theme-btn border-btn">More Details</a>
+                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
                     </div>

@@ -31,8 +31,11 @@
 <body class="page">
     @include('frontend.layouts.navigation')
 
-    @if (str_contains(url()->current(), 'aboutus') || str_contains(url()->current(), 'contactus') || str_contains(url()->current(), 'gallery')|| str_contains(url()->current(), 'staff')|| str_contains(url()->current(), 'results'))
-
+    @if (str_contains(url()->current(), 'aboutus') ||
+            str_contains(url()->current(), 'contactus') ||
+            str_contains(url()->current(), 'gallery') ||
+            str_contains(url()->current(), 'staff') ||
+            str_contains(url()->current(), 'results'))
         @include('frontend.layouts.inner-header');
     @else
         @include('frontend.layouts.header')
@@ -85,85 +88,31 @@
         </div>
         <!-- mobile menu area start -->
         <div class="mobile-menu-main">
-            <nav class="nav-main mainmenu-nav mt--30">
-                <ul class="mainmenu metismenu" id="mobile-menu-active">
-
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Homepages</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="index.html">Home Style One</a></li>
-                            <li><a class="mobile-menu-link" href="index-two.html">Home Style Two</a></li>
-                            <li><a class="mobile-menu-link" href="index-three.html">Home Style Three</a></li>
-                            <li><a class="mobile-menu-link" href="index-four.html">Home Style Four</a></li>
-                            <li><a class="mobile-menu-link" href="index-five.html">Home Style Five</a></li>
-                        </ul>
+            <nav class="navigation__menu">
+                <ul>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('home') }}" class="navigation__menu--item__link">Home</a>
                     </li>
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Pages</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="about.html">About Us</a></li>
-                            <li><a class="mobile-menu-link" href="athletics.html">Athletics</a></li>
-                            <li class="has-dropdown third-lvl">
-                                <a href="javascript:void(0);">Faculty</a>
-                                <ul class="submenu third-lvl base">
-                                    <li><a class="mobile-menu-link" href="faculty.html">Faculty</a></li>
-                                    <li><a class="mobile-menu-link" href="faculty-details.html">Faculty details</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="mobile-menu-link" href="research.html">Research</a></li>
-                        </ul>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('aboutus') }}" class="navigation__menu--item__link">About
+                            Us</a>
                     </li>
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Academics</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="academic.html">Academic</a></li>
-                            <li><a class="mobile-menu-link" href="admission.html">Admission</a></li>
-                            <li><a class="mobile-menu-link" href="academic-area.html">Academic Area</a></li>
-                            <li><a class="mobile-menu-link" href="campus-life.html">Campus Life</a></li>
-                            <li><a class="mobile-menu-link" href="scholarship.html">Scholarship</a></li>
-                            <li><a class="mobile-menu-link" href="tution-fee.html">Tution Fee</a></li>
-                            <li><a class="mobile-menu-link" href="alumni.html">Alumni</a></li>
-                            <li><a class="mobile-menu-link" href="program-single.html">Program Single</a></li>
-                        </ul>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('contactus') }}" class="navigation__menu--item__link">Contact
+                            Us</a>
                     </li>
-
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Events</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="event.html">Event</a></li>
-                            <li><a class="mobile-menu-link" href="event-details.html">Event Details</a></li>
-                        </ul>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('gallery') }}" class="navigation__menu--item__link">Photo
+                            Gallery</a>
                     </li>
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Blog</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="blog.html">Blog</a></li>
-                            <li><a class="mobile-menu-link" href="blog-grid.html">Blog Grid</a></li>
-                            <li><a class="mobile-menu-link" href="blog-list.html">Blog List</a></li>
-                            <li><a class="mobile-menu-link" href="blog-details.html">Blog Details</a></li>
-                        </ul>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('staff') }}" class="navigation__menu--item__link">Staff</a>
                     </li>
-                    <li>
-                        <a href="contact.html" class="main">Contact Us</a>
+                    <li class="navigation__menu--item">
+                        <a href="{{ route('results') }}" class="navigation__menu--item__link">Results</a>
                     </li>
                 </ul>
             </nav>
-
-            <div class="offcanvase__info--content mt--30">
-                <a href="callto:+61485826710"><span><i class="fa-sharp fa-light fa-phone"></i></span>+(61)
-                    485-826-710</a>
-                <a href="#"><span><i class="fa-sharp fa-light fa-location-dot"></i></span>Yarra Park, Melbourne,
-                    Australia</a>
-                <div class="offcanvase__info--content--social">
-                    <p class="title">Follow Us:</p>
-                    <div class="social__links">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- mobile menu area end -->
     </div>

@@ -43,7 +43,7 @@
                             dedicated to fostering intellectual curiosity, academic excellence, and a vibrant campus
                             community.</p>
                         <div class="stroke__text v__1">EST. 1971</div>
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">University Overview <span><i
+                        <a href="javascript:void(0)" class="rts-nbg-btn btn-arrow">University Overview <span><i
                                     class="fa-sharp fa-regular fa-arrow-right"></i></span></a>
                     </div>
                 </div>
@@ -86,9 +86,7 @@
                 <div class="rts__section--wrapper">
                     <h2 class="rts__section--title">Our Programs</h2>
                     <div class="rts__section--link">
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">more program<span><i
-                                    class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </span></a>
+
                     </div>
                 </div>
             </div>
@@ -98,7 +96,7 @@
                         <h5 class="rts__program--item--title">Graduation Program</h5>
                         <p class="rts__program--item--description">Embark on a journey of knowledge discovery, and growth at
                             Schools.</p>
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">Learn More<span><i
+                        <a href="javascript:void(0)" class="rts-nbg-btn btn-arrow">Learn More<span><i
                                     class="fa-sharp fa-regular fa-arrow-right"></i>
                             </span></a>
                     </div>
@@ -108,7 +106,7 @@
                         <h5 class="rts__program--item--title">Summer Program</h5>
                         <p class="rts__program--item--description">Embark on a journey of knowledge discovery, and growth at
                             Schools.</p>
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">Learn More<span><i
+                        <a href="javascript:void(0)" class="rts-nbg-btn btn-arrow">Learn More<span><i
                                     class="fa-sharp fa-regular fa-arrow-right"></i>
                             </span></a>
                     </div>
@@ -118,7 +116,7 @@
                         <h5 class="rts__program--item--title">Undergraduate</h5>
                         <p class="rts__program--item--description">Embark on a journey of knowledge discovery, and growth at
                             Schools.</p>
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">Learn More<span><i
+                        <a href="javascript:void(0)" class="rts-nbg-btn btn-arrow">Learn More<span><i
                                     class="fa-sharp fa-regular fa-arrow-right"></i>
                             </span></a>
                     </div>
@@ -128,7 +126,7 @@
                         <h5 class="rts__program--item--title">Online Program</h5>
                         <p class="rts__program--item--description">Embark on a journey of knowledge discovery, and growth at
                             Schools.</p>
-                        <a href="program-single.html" class="rts-nbg-btn btn-arrow">Learn More<span><i
+                        <a href="javascript:void(0)" class="rts-nbg-btn btn-arrow">Learn More<span><i
                                     class="fa-sharp fa-regular fa-arrow-right"></i>
                             </span></a>
                     </div>
@@ -145,9 +143,7 @@
                 <div class="rts__section--wrapper">
                     <h2 class="rts__section--title">University Professors</h2>
                     <div class="rts__section--link">
-                        <a href="faculty.html" class="rts-nbg-btn btn-arrow">Find More Professor<span><i
-                                    class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </span></a>
+
                     </div>
                 </div>
             </div>
@@ -157,13 +153,13 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="rts__single--member">
                         <div class="rts__single--member--thumb">
-                            <a href="faculty-details.html">
+                            <a href="javascript:void(0)">
                                 <img src="{{ asset('frontend/assets/images/speaker/teacher__1.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="rts__single--member--meta">
                             <h5 class="rts__single--member--meta--title">
-                                <a href="faculty-details.html">C. Hannah Ueno</a>
+                                <a href="javascript:void(0)">C. Hannah Ueno</a>
                             </h5>
                             <span class="rts__single--member--meta--designation">
                                 Assistant Professor
@@ -176,13 +172,13 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="rts__single--member">
                         <div class="rts__single--member--thumb">
-                            <a href="faculty-details.html">
+                            <a href="javascript:void(0)">
                                 <img src="{{ asset('frontend/assets/images/speaker/teacher__2.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="rts__single--member--meta">
                             <h5 class="rts__single--member--meta--title">
-                                <a href="faculty-details.html">Thomas Fred</a>
+                                <a href="javascript:void(0)">Thomas Fred</a>
                             </h5>
                             <span class="rts__single--member--meta--designation">
                                 Associate Professor of History
@@ -195,13 +191,13 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="rts__single--member">
                         <div class="rts__single--member--thumb">
-                            <a href="faculty-details.html">
+                            <a href="javascript:void(0)">
                                 <img src="{{ asset('frontend/assets/images/speaker/teacher__3.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="rts__single--member--meta">
                             <h5 class="rts__single--member--meta--title">
-                                <a href="faculty-details.html">Jennifer Aarons</a>
+                                <a href="javascript:void(0)">Jennifer Aarons</a>
                             </h5>
                             <span class="rts__single--member--meta--designation">
                                 Professor of Art
@@ -214,13 +210,13 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="rts__single--member">
                         <div class="rts__single--member--thumb">
-                            <a href="faculty-details.html">
+                            <a href="javascript:void(0)">
                                 <img src="{{ asset('frontend/assets/images/speaker/teacher__4.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="rts__single--member--meta">
                             <h5 class="rts__single--member--meta--title">
-                                <a href="faculty-details.html">Michael McGarvey</a>
+                                <a href="javascript:void(0)">Michael McGarvey</a>
                             </h5>
                             <span class="rts__single--member--meta--designation">
                                 Professor of Literature
