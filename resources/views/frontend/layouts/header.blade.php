@@ -13,7 +13,7 @@
                             meets innovation
                         </h6>
                         <h1 class="banner__content--title">
-                            University
+                            School
                             <span> Of Unipix</span>
                         </h1>
                         <div class="banner__content--circle rts__circle v__2">
