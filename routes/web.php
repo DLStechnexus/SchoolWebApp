@@ -31,15 +31,31 @@ Route::get('/staff', [StaffController::class, 'index'])->name('staff');
 
 
 Route::middleware('auth')->prefix('admin')->group(function () {
-    // Route::get('/logout', [LoginController::class, 'logout'])->name('auth.logout');
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 
     Route::get('students/list', [StudentController::class, 'index'])->name('student.list');
     Route::get('students/create', [StudentController::class, 'create'])->name('student.create');
+    Route::post('students/store', [StudentController::class, 'store'])->name('student.store');
+    Route::get('students/edit/{id}', [StudentController::class, 'edit'])->name('student.edit');
+    Route::get('students/details/{id}', [StudentController::class, 'show'])->name('student.details');
+    Route::post('students/delete', [StudentController::class, 'destroy'])->name('student.destroy');
+    Route::post('students/update', [StudentController::class, 'update'])->name('student.update');
+
     Route::get('staff/member/list', [MemberController::class, 'index'])->name('staff.list');
     Route::get('staff/member/create', [MemberController::class, 'create'])->name('staff.create');
+    Route::post('staff/member/store', [MemberController::class, 'store'])->name('staff.store');
+    Route::get('staff/member/edit/{id}', [MemberController::class, 'edit'])->name('staff.edit');
+    Route::get('staff/member/details/{id}', [MemberController::class, 'show'])->name('staff.details');
+    Route::post('staff/member/delete', [MemberController::class, 'destroy'])->name('staff.destroy');
+    Route::post('staff/member/update', [MemberController::class, 'update'])->name('staff.update');
+
+
+
+
+
     Route::get('results/list', [ResultsController::class, 'index'])->name('result.list');
     Route::get('results/create', [ResultsController::class, 'create'])->name('result.create');
     Route::get('gallery/create', [PhotoGalleryController::class, 'create'])->name('gallery.create');

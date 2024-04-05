@@ -5,8 +5,8 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="footer__widget">
                     <div class="footer__widget--logo">
-                        <a href="{{route('home')}}"><img src="{{ asset('frontend/assets/images/logo/logo__white.svg') }}"
-                                alt="logo"></a>
+                        <a href="{{ route('home') }}"><img
+                                src="{{ asset('frontend/assets/images/logo/logo__white.svg') }}" alt="logo"></a>
                     </div>
                     <p class="footer__widget--description">
                         We are passionate education dedicated to providing high-quality resources learners
@@ -29,7 +29,7 @@
                         <ul>
                             <li><a href="{{ route('staff') }}">Staff Member</a></li>
                             <li><a href="{{ route('results') }}">Results</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="{{ route('login') }}">Login</a></li>
 
                         </ul>
                     </div>

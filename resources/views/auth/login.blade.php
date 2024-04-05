@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -44,4 +44,67 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
+@extends('backend.layouts.guest-layout')
+@section('title')
+    Login Page
+@endsection
+@section('content')
+    <div class="main_content_iner ">
+        <div class="container-fluid plr_30 body_white_bg pt_30">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="white_box mb_30">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+
+                                <div class="modal-content cs_modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Log in</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" action="{{ route('login') }}">
+                                            @csrf
+
+
+                                            <div class>
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                    placeholder="Enter your email">
+                                            </div>
+                                            <div class>
+                                                <input type="password" name="password" id="password" class="form-control"
+                                                    placeholder="Password">
+                                            </div>
+                                            <button type="submit" class="btn_1 full_width text-center">Log in</button>
+
+                                            {{-- <div class="text-center">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#forgot_password"
+                                                    data-bs-dismiss="modal" class="pass_forget_btn">Forget
+                                                    Password?</a>
+                                            </div> --}}
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="footer_iner text-center">
+                            <p>2020 © Influence - Designed by<a href="#"> Dashboard</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('script')
+@endsection

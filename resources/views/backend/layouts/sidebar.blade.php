@@ -32,9 +32,9 @@
 
             </ul>
         </li>
-        <li><a href="{{ route('gallery.create') }}">
+        {{-- <li><a href="{{ route('gallery.create') }}">
                 <img src="{{ asset('backend/img/menu-icon/4.svg') }}" alt> <span>Photo Gallery</span>
-            </a></li>
+            </a></li> --}}
         <li class>
             <a class="has-arrow" href="#" aria-expanded="false">
                 <img src="{{ asset('backend/img/menu-icon/5.svg') }}" alt>
