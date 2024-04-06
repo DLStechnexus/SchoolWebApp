@@ -5,7 +5,14 @@
                 <div class="header__wrapper">
                     <div class="header__logo">
                         <a href="{{ route('home') }}" class="header__logo--link">
-                            <img src="{{ asset('frontend/assets/images/logo/logo__five.svg') }}" alt="unipix">
+                            @php
+                                $logoSection = \App\Models\LogoSetting::first();
+                            @endphp
+                            @if ($logoSection)
+                                <img src="{{ asset('upload/logo') }}/{{ $logoSection->logo_image }}" height="100px" width="100px" alt="unipix">
+                            @else
+                                <img src="{{ asset('frontend/assets/images/logo/logo__five.svg') }}" alt="unipix">
+                            @endif
                         </a>
                     </div>
                     <div class="header__menu">

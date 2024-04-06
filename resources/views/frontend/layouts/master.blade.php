@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <!-- Mirrored from html.themewant.com/unipix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2024 12:09:53 GMT -->
 
 <head>
@@ -30,24 +28,9 @@
 
 <body class="page">
     @include('frontend.layouts.navigation')
-
-    @if (str_contains(url()->current(), 'aboutus') ||
-            str_contains(url()->current(), 'contactus') ||
-            str_contains(url()->current(), 'gallery') ||
-            str_contains(url()->current(), 'staff') ||
-            str_contains(url()->current(), 'results'))
-        @include('frontend.layouts.inner-header');
-    @else
-        @include('frontend.layouts.header')
-    @endif
-
+    @include('frontend.layouts.inner-header');
     @yield('content')
-
-
-
-
     @include('frontend.layouts.footer')
-
     <div id="side-bar" class="side-bar">
         <button class="close-icon-menu"><i class="far fa-times"></i></button>
         <!-- inner menu area desktop start -->
@@ -116,7 +99,6 @@
         </div>
         <!-- mobile menu area end -->
     </div>
-
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
@@ -157,8 +139,6 @@
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
     @yield('script');
 </body>
-
-
 <!-- Mirrored from html.themewant.com/unipix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2024 12:10:04 GMT -->
 
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\SliderImage;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -12,7 +13,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.gallery');
+        $sliders = SliderImage::all();
+        return view('frontend.pages.gallery',compact('sliders'));
     }
 
     /**

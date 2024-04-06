@@ -4,9 +4,19 @@
         <div class="row g-5">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="footer__widget">
+                    @php
+                        $logoSection = \App\Models\LogoSetting::first();
+                    @endphp
                     <div class="footer__widget--logo">
-                        <a href="{{ route('home') }}"><img
-                                src="{{ asset('frontend/assets/images/logo/logo__white.svg') }}" alt="logo"></a>
+                        @if ($logoSection)
+                            <a href="{{ route('home') }}"><img
+                                    src="{{ asset('upload/logo') }}/{{ $logoSection->logo_image }}" height="100px"
+                                    width="100px" alt="unipix"></a>
+                        @else
+                            <a href="{{ route('home') }}"><img
+                                    src="{{ asset('frontend/assets/images/logo/logo__five.svg') }}" alt="unipix"></a>
+                        @endif
+
                     </div>
                     <p class="footer__widget--description">
                         We are passionate education dedicated to providing high-quality resources learners

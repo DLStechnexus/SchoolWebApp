@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +14,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.index');
+        $aboutUs = AboutUs::first();
+        $student = User::where('role_id', 1)->count();
+        $teacher = User::where('role_id', 2)->count();
+        $staff = User::whereIn('role_id', [3, 4])->count();
+        return view('frontend.pages.index', compact('aboutUs', 'student', 'teacher', 'staff'));
     }
 
     /**

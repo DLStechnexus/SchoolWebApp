@@ -10,7 +10,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Faculty</li>
                         </ul>
                         <h2 class="section-title">Faculty Directory</h2>
@@ -30,229 +30,50 @@
             </div>
             <div class="row justify-content-md-center g-5">
                 <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/01.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Jennifer Aarons, PhD</h5>
-                                <span class="designation">Assistant Professor</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                @if (!empty($staffs))
+                    @foreach ($staffs as $key => $staff)
+                        <div class="col-lg-6 col-md-11">
+                            <div class="single-staff">
+                                <div class="single-staff__content">
+
+                                    <div class="staf-image">
+                                        @if ($staff->user_details->profile_image)
+                                            <img src="{{ asset('upload/staff') }}/{{ $staff->user_details->profile_image }}"
+                                                alt="unipix">
+                                        @else
+                                            <img src="{{ asset('frontend/assets/images/faculty/01.jpg') }}"
+                                                alt="staff-image">
+                                        @endif
+
+                                    </div>
+                                    <div class="staf-info">
+                                        <h5 class="name">{{ $staff->name ?? '' }}</h5>
+                                        <span class="designation">
+                                            @if ($staff->role_id == 2)
+                                                Teacher
+                                            @elseif ($staff->role_id == 3)
+                                                Peon
+                                            @else
+                                                Other
+                                            @endif
+                                        </span>
+
+                                        <a href="mailto:{{ $staff->email }}" class="email-contact"><span><i
+                                                    class="fa-light fa-envelope"></i></span>{{ $staff->email }}</a>
+                                        <a href="calltto:121" class="phone-contact"><span><i
+                                                    class="fa-light fa-phone"></i></span>{{ $staff->user_details->mobile_number }}</a>
+                                        <div class="staf-info__speciality">
+                                            <p>{{ $staff->user_details->qualification }}</p>
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i class="fa-light fa-phone"></i></span>+1
-                                    2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/02.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Barry Palatnik, Ed.D</h5>
-                                <span class="designation">Associate Professor of History</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i class="fa-light fa-phone"></i></span>+1
-                                    2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/03.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Marc Robinson, MBA</h5>
-                                <span class="designation">Teaching Specialist of Accounting</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i class="fa-light fa-phone"></i></span>+1
-                                    2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/04.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Jennifer Aarons, PhD</h5>
-                                <span class="designation">Assistant Professor</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i
-                                            class="fa-light fa-phone"></i></span>+1 2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/05.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Chengzhang Wu, Ph.D</h5>
-                                <span class="designation">Professor of Literature</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i
-                                            class="fa-light fa-phone"></i></span>+1 2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/06.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Nancy Stempin, DBA</h5>
-                                <span class="designation">Assistant Professor of Accounting</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i
-                                            class="fa-light fa-phone"></i></span>+1 2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/07.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">Michael McGarvey</h5>
-                                <span class="designation">Professor of Art</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i
-                                            class="fa-light fa-phone"></i></span>+1 2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single staff item -->
-                <div class="col-lg-6 col-md-11">
-                    <div class="single-staff">
-                        <div class="single-staff__content">
-                            <div class="staf-image">
-                                <img src="{{ asset('frontend/assets/images/faculty/08.jpg') }}" alt="staff-image">
-                            </div>
-                            <div class="staf-info">
-                                <h5 class="name">C. Hannah Ueno</h5>
-                                <span class="designation">Professor of Art</span>
-                                <div class="staf-info__social">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i
-                                            class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i
-                                            class="fa-light fa-phone"></i></span>+1 2245 1247 241</a>
-                                <div class="staf-info__speciality">
-                                    <p>Hospitality, Tourism, Event Management and Esports</p>
-                                </div>
-                                <a href="javascript:void(0)" class="rts-theme-btn border-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
+
+
             </div>
 
         </div>

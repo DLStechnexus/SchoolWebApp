@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class StaffController extends Controller
@@ -12,7 +13,8 @@ class StaffController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.staff');
+        $staffs = User::with('user_details')->whereIn('role_id',[2,3,4])->get();
+        return view('frontend.pages.staff',compact('staffs'));
     }
 
     /**

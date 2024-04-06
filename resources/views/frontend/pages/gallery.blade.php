@@ -10,10 +10,10 @@
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Photo Gallery</li>
                         </ul>
-                        <h2 class="section-title">About Schools</h2>
+                        <h2 class="section-title">Photo Gallery</h2>
                     </div>
                 </div>
             </div>
@@ -27,39 +27,22 @@
                 </div>
             </div>
             <div class="row g-5">
-                <!-- single item -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-item">
-                        <div class="single-item__content">
-                            <div class="single-item__image">
-                                <img src="{{ asset('frontend/assets/images/campus/04.jpg') }}" alt="item-image">
+                @if (!empty($sliders))
+                    @foreach ($sliders as $key => $value)
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-item">
+                                <div class="single-item__content">
+                                    <div class="single-item__image">
+                                        <img src="{{ asset('upload/slider') }}/{{ $value->slider_image }}" alt="item-image">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- single item end -->
-                <!-- single item -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-item">
-                        <div class="single-item__content">
-                            <div class="single-item__image">
-                                <img src="{{ asset('frontend/assets/images/campus/05.jpg') }}" alt="item-image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single item end -->
-                <!-- single item -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-item">
-                        <div class="single-item__content">
-                            <div class="single-item__image">
-                                <img src="{{ asset('frontend/assets/images/campus/06.jpg') }}" alt="item-image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single item end -->
+                    @endforeach
+                @endif
+
+
+
             </div>
         </div>
     </div>

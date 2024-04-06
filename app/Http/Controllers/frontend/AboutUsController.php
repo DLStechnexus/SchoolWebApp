@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
+use App\Models\LogoSetting;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
@@ -12,7 +15,13 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.about-us');
+        $aboutUs = AboutUs::first();
+        $logoSection = LogoSetting::first();
+        $student = User::where('role_id', 1)->count();
+        $teacher = User::where('role_id', 2)->count();
+        $staff = User::whereIn('role_id', [3, 4])->count();
+        $logoSection = LogoSetting::first();
+        return view('frontend.pages.about-us',compact('aboutUs','student', 'teacher', 'staff','logoSection'));
     }
 
     /**

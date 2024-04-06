@@ -4,6 +4,7 @@ use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\Gallery\PhotoGalleryController;
 use App\Http\Controllers\backend\Member\MemberController;
 use App\Http\Controllers\backend\Results\ResultsController;
+use App\Http\Controllers\backend\Setting\SettingController;
 use App\Http\Controllers\backend\Student\StudentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -58,7 +59,23 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::get('results/list', [ResultsController::class, 'index'])->name('result.list');
     Route::get('results/create', [ResultsController::class, 'create'])->name('result.create');
-    Route::get('gallery/create', [PhotoGalleryController::class, 'create'])->name('gallery.create');
+    Route::post('results/store', [ResultsController::class, 'store'])->name('result.store');
+    Route::get('results/edit/{id}', [ResultsController::class, 'edit'])->name('result.edit');
+    Route::get('results/details/{id}', [ResultsController::class, 'show'])->name('result.details');
+    Route::post('results/delete', [ResultsController::class, 'destroy'])->name('result.destroy');
+    Route::post('results/update', [ResultsController::class, 'update'])->name('result.update');
+
+
+
+
+
+
+    Route::get('settings', [SettingController::class, 'create'])->name('setting.create');
+    Route::post('logo/store', [SettingController::class, 'logoStore'])->name('logo.store');
+    Route::post('about/store', [SettingController::class, 'aboutStore'])->name('about.store');
+    Route::post('contact/store', [SettingController::class, 'contactStore'])->name('contact.store');
+    Route::post('slider/store', [SettingController::class, 'sliderStore'])->name('slider.store');
+    Route::post('slider/delete', [SettingController::class, 'sliderDelete'])->name('slider.destroy');
 });
 
 

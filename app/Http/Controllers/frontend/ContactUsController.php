@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUs;
+use App\Models\LogoSetting;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -12,7 +14,11 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.contact-us');
+
+        $logoSection = LogoSetting::first();
+        $contactUs = ContactUs::first();
+
+        return view('frontend.pages.contact-us', compact('logoSection', 'contactUs'));
     }
 
     /**

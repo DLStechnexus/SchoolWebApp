@@ -2238,7 +2238,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child::before {
     position: fixed;
     top: 0;
     z-index: 99;
-    padding: 30px;
+    padding: 16px;
     position: relative;
     margin: 27px 30px;
     border-radius: 7px
