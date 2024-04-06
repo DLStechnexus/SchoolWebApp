@@ -22,13 +22,12 @@
     <div class="rts-page-content rts-section-padding">
         <div class="container">
             <div class="row">
-                <div class="row sticky-coloum-wrap g-5">
+                {{-- <div class="row sticky-coloum-wrap g-5">
                     <div class="col-lg-12">
                         <div class="rts-ap-section">
                             <h3 class="rts-section-title mb--30">Search Results</h3>
                             <div class="rts-application-form">
-                                <form method="post" action="{{route('search.result')}}">
-                                    @csrf
+                                <form action="#">
                                     <div class="single-form-part">
                                         <div class="single-input">
                                             <div class="single-input-item">
@@ -72,7 +71,7 @@
                                             </div>
                                             <div class="single-input-item">
                                                 <label for="roll_no">Roll No.</label>
-                                                <input type="text" id="roll_no" name="roll_no" placeholder="Roll Number">
+                                                <input type="text" id="roll_no" placeholder="Roll Number">
                                             </div>
                                         </div>
                                     </div>
@@ -82,8 +81,52 @@
                             </div>
                         </div>
                     </div>
+                </div> --}}
+                <a href="{{ route('results') }}">Go Back</a>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Name -:{{ $results->users->name }}</h4>
+                        <h4>Roll No. -:{{ $results->users->user_unique_id }}</h4>
+                    </div>
+                    <div class="col-sm-6 text-end">
+                        <h4>Class Standard -:{{ $results->class_standard }}</h4>
+                        <h4>Session -:{{ $results->year_session }}</h4>
+                        <h4>Exam Type -:{{ $results->exam_type }}</h4>
+                    </div>
                 </div>
 
+                <div class="col-12 ">
+                    <div class="admission-content-top">
+                        <div class="application-deadline">
+                            <h3 class="rts-section-title">Your Result</h3>
+                            <div class="application-deadline__content">
+                                <div class="application-deadline__content--table">
+                                    <table class="table">
+                                        <thead class="table-theme">
+                                            <tr>
+                                                <td>Subject</td>
+                                                <td>Out of Marks</td>
+                                                <td>Obtain Marks</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (!empty($results->marks))
+                                                @foreach ($results->marks as $result)
+                                                    <tr>
+                                                        <td>{{ $result->subject_name }}</td>
+                                                        <td>{{ $result->out_of_marks }}</td>
+                                                        <td>{{ $result->obtain_marks }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

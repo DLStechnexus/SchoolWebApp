@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Result;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ResultController extends Controller
@@ -28,7 +30,16 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $user = User::where('user_unique_id', $request->roll_no)->first();
+        $results = Result::with('marks')->where([
+            "class_standard" => $request->class_standard,
+            "year_session" => $request->yearly_session,
+            "exam_type" => $request->exam_type,
+            "user_id" => $user->id,
+        ])->first();
+
+        return view('frontend.pages.search-result', compact('results'));
     }
 
     /**

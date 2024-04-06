@@ -25,6 +25,7 @@ Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/results', [ResultController::class, 'index'])->name('results');
+Route::post('search/results', [ResultController::class, 'store'])->name('search.result');
 Route::get('/staff', [StaffController::class, 'index'])->name('staff');
 
 
