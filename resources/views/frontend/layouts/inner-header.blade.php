@@ -24,16 +24,13 @@
                                         <a href="{{ route('home') }}" class="navigation__menu--item__link">Home</a>
                                     </li>
                                     <li class="navigation__menu--item">
-                                        <a href="{{ route('aboutus') }}" class="navigation__menu--item__link">About
-                                            Us</a>
+                                        <a href="{{ route('aboutus') }}" class="navigation__menu--item__link">About&nbsp;Us</a>
                                     </li>
                                     <li class="navigation__menu--item">
-                                        <a href="{{ route('contactus') }}" class="navigation__menu--item__link">Contact
-                                            Us</a>
+                                        <a href="{{ route('contactus') }}" class="navigation__menu--item__link">Contact&nbsp;Us</a>
                                     </li>
                                     <li class="navigation__menu--item">
-                                        <a href="{{ route('gallery') }}" class="navigation__menu--item__link">Photo
-                                            Gallery</a>
+                                        <a href="{{ route('gallery') }}" class="navigation__menu--item__link">Photo&nbsp;Gallery</a>
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="{{ route('staff') }}" class="navigation__menu--item__link">Staff</a>
@@ -52,7 +49,7 @@
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="{{ route('admission.create') }}"
-                                            class="navigation__menu--item__link">New Admission</a>
+                                            class="navigation__menu--item__link">New&nbsp;Admission</a>
                                     </li>
                                 </ul>
                             </nav>

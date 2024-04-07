@@ -57,6 +57,7 @@
   --f-black: 900;
   --translate: translate(-50%, -50%);
   --transition: all 0.4s ease;
+  --font-size-b1: 14px;
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Canela trial";
   --font-hind: "Hind", sans-serif;
@@ -410,7 +411,7 @@ var {
 }
 
 /*---------------------------
-	List Style 
+	List Style
 ---------------------------*/
 ul,
 ol {
@@ -601,7 +602,7 @@ ol ul {
 }
 
 /*=========================
-    Section Separation 
+    Section Separation
 ==========================*/
 .slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -10332,7 +10333,7 @@ iframe {
 }
 
 /*===============================
-    Background Color 
+    Background Color
 =================================*/
 .bg-color-primary {
   background: var(--rt-primary);
@@ -10363,7 +10364,7 @@ iframe {
 }
 
 /*===========================
-Background Image 
+Background Image
 =============================*/
 .bg_image {
   background-repeat: no-repeat;
@@ -11037,7 +11038,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=============================
-	Overlay styles 
+	Overlay styles
 ==============================*/
 [data-overlay],
 [data-black-overlay],
@@ -11141,7 +11142,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*------------------------------
-    Scroll Up 
+    Scroll Up
 --------------------------------*/
 #scrollUp {
   width: 70px;
@@ -14656,9 +14657,9 @@ Copyright (c) 2015 Daniel Eden
   opacity: 1;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xclip 
+xclip
 
 -------------------------------- */
 .cd-headline.clip span {
@@ -16147,7 +16148,7 @@ xclip
 }
 .navigation__menu--item__link {
   position: relative;
-  font-size: 15px;
+  font-size: 13px;
   font-family: var(--font-primary);
   font-weight: 500;
   text-transform: uppercase;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Notice;
+use App\Models\SliderImage;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class HomeController extends Controller
         $principal = User::with('user_details')->where('role_id', 5)->orderBy('id', 'desc')->first();
         $manager = User::with('user_details')->where('role_id', 6)->orderBy('id', 'desc')->first();
         $notice = Notice::first();
-        return view('frontend.pages.index', compact('aboutUs', 'student', 'teacher', 'staff', 'principal', 'manager', 'notice'));
+        $sliders = SliderImage::all();
+        return view('frontend.pages.index', compact('aboutUs', 'student', 'teacher', 'staff', 'principal', 'manager', 'notice', 'sliders'));
     }
 
     /**
