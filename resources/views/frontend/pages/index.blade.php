@@ -39,7 +39,7 @@
         </button>
     </div>
     <section class="about rts__padding--120-100 v__1">
-        <section id="" class="text-center" style="background-color: #14b7f1;">
+        <section id="" class="text-center bg-rt-secondary">
             <div>&nbsp;</div>
             <div class="container">
                 <div class="row">

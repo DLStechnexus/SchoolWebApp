@@ -1,4 +1,4 @@
-<header class="header header__sticky v__1">
+<header class="header header__sticky v__1  d-none">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12">
