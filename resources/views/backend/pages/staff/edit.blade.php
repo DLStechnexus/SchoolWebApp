@@ -110,6 +110,8 @@
                                                     <select name="role_id" id="role_id" class="form-control"
                                                         style="height: 52px">
                                                         <option value="">Select Staff Type</option>
+                                                        <option value="5"  {{ $staff_member->role_id == 5 ? 'selected' : '' }}>Principal</option>
+                                                        <option value="6"  {{ $staff_member->role_id == 6 ? 'selected' : '' }}>Manager</option>
                                                         <option value="2"
                                                             {{ $staff_member->role_id == 2 ? 'selected' : '' }}>
                                                             Teacher</option>

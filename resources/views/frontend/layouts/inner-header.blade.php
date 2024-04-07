@@ -9,7 +9,8 @@
                                 $logoSection = \App\Models\LogoSetting::first();
                             @endphp
                             @if ($logoSection)
-                                <img src="{{ asset('upload/logo') }}/{{ $logoSection->logo_image }}" height="100px" width="100px" alt="unipix">
+                                <img src="{{ asset('upload/logo') }}/{{ $logoSection->logo_image }}" height="100px"
+                                    width="100px" alt="unipix">
                             @else
                                 <img src="{{ asset('frontend/assets/images/logo/logo__five.svg') }}" alt="unipix">
                             @endif
@@ -41,6 +42,18 @@
                                         <a href="{{ route('results') }}"
                                             class="navigation__menu--item__link">Results</a>
                                     </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="https://upmsp.edu.in/" target="_blank"
+                                            class="navigation__menu--item__link">UPMSP</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="http://www.scholarship.up.gov.in/" target="_blank"
+                                            class="navigation__menu--item__link">Scholarship</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="{{ route('admission.create') }}"
+                                            class="navigation__menu--item__link">New Admission</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -48,7 +61,7 @@
                     <div class="header__right">
                         <div class="header__right--item">
                             <div id="menu-btn" class="menu__trigger">
-                                <img src="{{ asset('frontend/assets/images/icon/menu__bar-2.svg') }}" alt="bar">
+                                {{-- <img src="{{ asset('frontend/assets/images/icon/menu__bar-2.svg') }}" alt="bar"> --}}
                             </div>
                         </div>
                     </div>
@@ -57,3 +70,11 @@
         </div>
     </div>
 </header>
+@php
+    $logoSection = \App\Models\LogoSetting::first();
+@endphp
+<marquee behavior="alternate" direction="">
+    <h2 style="color:blue">
+        {{ $logoSection->school_name ?? '' }}
+    </h2>
+</marquee>

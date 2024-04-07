@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('logo_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('school_name')->nullable();
+            $table->text('school_name')->nullable();
             $table->string('logo_image')->nullable();
             $table->string('created_by')->nullable();
             $table->timestamps();

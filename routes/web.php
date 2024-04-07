@@ -9,6 +9,7 @@ use App\Http\Controllers\backend\Student\StudentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\AboutUsController;
+use App\Http\Controllers\frontend\AdmissionController;
 use App\Http\Controllers\frontend\ContactUsController;
 use App\Http\Controllers\frontend\GalleryController;
 use App\Http\Controllers\frontend\HomeController;
@@ -28,6 +29,8 @@ Route::get('/results', [ResultController::class, 'index'])->name('results');
 Route::post('search/results', [ResultController::class, 'store'])->name('search.result');
 Route::get('/staff', [StaffController::class, 'index'])->name('staff');
 
+Route::get('/admission', [AdmissionController::class, 'create'])->name('admission.create');
+Route::post('admission/store', [AdmissionController::class, 'store'])->name('admission.store');
 
 
 
@@ -77,6 +80,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::post('contact/store', [SettingController::class, 'contactStore'])->name('contact.store');
     Route::post('slider/store', [SettingController::class, 'sliderStore'])->name('slider.store');
     Route::post('slider/delete', [SettingController::class, 'sliderDelete'])->name('slider.destroy');
+    Route::post('notice/store', [SettingController::class, 'noticeStore'])->name('notice.store');
+
 });
 
 

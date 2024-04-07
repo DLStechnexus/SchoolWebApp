@@ -32,7 +32,7 @@
                                                 <label for="">First Name</label>
                                                 <input type="text" class="form-control" name="first_name" id="first_name"
                                                     placeholder="First Name" oninput="textInput(this)"
-                                                    value="{{ $staff_member->user_details->first_name }}" required>
+                                                    value="{{ $staff_member->user_details->first_name ?? '' }}" required>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -40,14 +40,14 @@
                                                 <label for="">Last Name</label>
                                                 <input type="text" class="form-control" name="last_name" id="last_name"
                                                     placeholder="Last Name" oninput="textInput(this)"
-                                                    value="{{ $staff_member->user_details->last_name }}"required>
+                                                    value="{{ $staff_member->user_details->last_name ?? '' }}"required>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-3 form-group">
                                                 <label for="">Email</label>
                                                 <input type="email" class="form-control" name="email" id="email"
-                                                    value="{{ $staff_member->email }}" placeholder="Email" readonly>
+                                                    value="{{ $staff_member->email ?? '' }}" placeholder="Email" readonly>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -55,8 +55,8 @@
                                                 <label for="">Adhar Number</label>
                                                 <input type="text" class="form-control" name="adhar_number"
                                                     id="adhar_number" placeholder="Adhar Number" min="12"
-                                                    value="{{ $staff_member->user_details->aadhar_number }}" maxlength="12"
-                                                    oninput="digitInput(this)" required>
+                                                    value="{{ $staff_member->user_details->aadhar_number ?? '' }}"
+                                                    maxlength="12" oninput="digitInput(this)" required>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -64,7 +64,7 @@
                                                 <label for="">Mobile Number</label>
                                                 <input type="text" class="form-control" name="mobile_number"
                                                     id="mobile_number" placeholder="Mobile Number"
-                                                    value="{{ $staff_member->user_details->mobile_number }}"
+                                                    value="{{ $staff_member->user_details->mobile_number ?? '' }}"
                                                     oninput="digitInput(this)" min="10" maxlength="10" required>
                                             </div>
                                         </div>
@@ -74,7 +74,7 @@
                                                 <label for="">Father Name</label>
                                                 <input type="text" class="form-control" name="father_name"
                                                     id="father_name" placeholder="Father Name" oninput="textInput(this)"
-                                                    value="{{ $staff_member->user_details->father_name }}" required>
+                                                    value="{{ $staff_member->user_details->father_name ?? '' }}" required>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -82,7 +82,7 @@
                                                 <label for="">Mother name</label>
                                                 <input type="text" class="form-control" name="mother_name"
                                                     id="mother_name" placeholder="Mother Name" oninput="textInput(this)"
-                                                    value="{{ $staff_member->user_details->mother_name }}" required>
+                                                    value="{{ $staff_member->user_details->mother_name ?? '' }}" required>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -112,6 +112,12 @@
                                                 <select name="role_id" id="role_id" class="form-control"
                                                     style="height: 52px">
                                                     <option value="">Select Staff Type</option>
+                                                    <option value="5"
+                                                        {{ $staff_member->role_id == 5 ? 'selected' : '' }}>Principal
+                                                    </option>
+                                                    <option value="6"
+                                                        {{ $staff_member->role_id == 6 ? 'selected' : '' }}>Manager
+                                                    </option>
                                                     <option value="2"
                                                         {{ $staff_member->role_id == 2 ? 'selected' : '' }}>
                                                         Teacher</option>

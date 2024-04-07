@@ -4,7 +4,7 @@
             <div class="col-xl-12">
                 <div class="header__wrapper">
                     <div class="header__logo">
-                        <a href="{{route('home')}}" class="header__logo--link">
+                        <a href="{{ route('home') }}" class="header__logo--link">
                             <img src="{{ asset('frontend/assets/images/logo/logo__white.svg') }}" alt="unipix">
                         </a>
                     </div>
@@ -17,7 +17,7 @@
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="{{ route('aboutus') }}" class="navigation__menu--item__link">About
-                                            Us</a>
+                                            School</a>
                                     </li>
                                     <li class="navigation__menu--item">
                                         <a href="{{ route('contactus') }}" class="navigation__menu--item__link">Contact
@@ -30,8 +30,22 @@
                                     <li class="navigation__menu--item">
                                         <a href="{{ route('staff') }}" class="navigation__menu--item__link">Staff</a>
                                     </li>
+
                                     <li class="navigation__menu--item">
-                                        <a href="{{ route('results') }}" class="navigation__menu--item__link">Results</a>
+                                        <a href="{{ route('results') }}"
+                                            class="navigation__menu--item__link">Results</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="https://upmsp.edu.in/" target="_blank"
+                                            class="navigation__menu--item__link">UPMSP</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="http://www.scholarship.up.gov.in/" target="_blank"
+                                            class="navigation__menu--item__link">Scholarship</a>
+                                    </li>
+                                    <li class="navigation__menu--item">
+                                        <a href="{{ route('admission.create') }}"
+                                            class="navigation__menu--item__link">New Admission</a>
                                     </li>
                                 </ul>
                             </nav>

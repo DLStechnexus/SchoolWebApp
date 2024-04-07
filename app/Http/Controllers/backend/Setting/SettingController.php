@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\ContactUs;
 use App\Models\LogoSetting;
+use App\Models\Notice;
 use App\Models\SliderImage;
 use Exception;
 use Illuminate\Http\Request;
@@ -69,11 +70,12 @@ class SettingController extends Controller
                 return redirect()->back()->with('success', 'Content Added Successfully!');
             } else {
                 DB::rollBack();
+
                 return redirect()->back()->with('error', 'Unable to Add Content!!');
             }
         } catch (Exception $th) {
             DB::rollBack();
-
+            dd($th->getMessage());
             return redirect()->back()->with('error', 'An unexpected error occurred.');
         }
     }
@@ -90,6 +92,34 @@ class SettingController extends Controller
                     'address' => $request->address,
                     'contact_no' => $request->contact_no,
                     'timing' => $request->timing,
+
+                ]
+            );
+            if ($logo) {
+                DB::commit();
+                return redirect()->back()->with('success', 'Content Added Successfully!');
+            } else {
+                DB::rollBack();
+                return redirect()->back()->with('error', 'Unable to Add Content!!');
+            }
+        } catch (Exception $th) {
+            DB::rollBack();
+            dd($th->getMessage());
+            return redirect()->back()->with('error', 'An unexpected error occurred.');
+        }
+    }
+
+    public function noticeStore(Request $request)
+    {
+        DB::beginTransaction();
+        try {
+            $logo = Notice::updateOrCreate(
+                [
+                    'created_by' => 1,
+                ],
+                [
+                    'notice' => $request->notice,
+
 
                 ]
             );

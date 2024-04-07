@@ -19,9 +19,9 @@ class AboutUsController extends Controller
         $logoSection = LogoSetting::first();
         $student = User::where('role_id', 1)->count();
         $teacher = User::where('role_id', 2)->count();
-        $staff = User::whereIn('role_id', [3, 4])->count();
+        $staff = User::whereIn('role_id', [2,3, 4, 5, 6])->count();
         $logoSection = LogoSetting::first();
-        return view('frontend.pages.about-us',compact('aboutUs','student', 'teacher', 'staff','logoSection'));
+        return view('frontend.pages.about-us', compact('aboutUs', 'student', 'teacher', 'staff', 'logoSection'));
     }
 
     /**

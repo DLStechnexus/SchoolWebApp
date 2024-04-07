@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Notice;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,11 @@ class HomeController extends Controller
         $aboutUs = AboutUs::first();
         $student = User::where('role_id', 1)->count();
         $teacher = User::where('role_id', 2)->count();
-        $staff = User::whereIn('role_id', [3, 4])->count();
-        return view('frontend.pages.index', compact('aboutUs', 'student', 'teacher', 'staff'));
+        $staff = User::whereIn('role_id', [2, 3, 4, 5, 6])->count();
+        $principal = User::with('user_details')->where('role_id', 5)->orderBy('id', 'desc')->first();
+        $manager = User::with('user_details')->where('role_id', 6)->orderBy('id', 'desc')->first();
+        $notice = Notice::first();
+        return view('frontend.pages.index', compact('aboutUs', 'student', 'teacher', 'staff', 'principal', 'manager', 'notice'));
     }
 
     /**

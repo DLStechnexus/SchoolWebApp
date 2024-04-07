@@ -21,10 +21,10 @@ class ContentServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer('frontend.layouts.inner-header', function ($view) {
-            $users = User::where('id', auth()->user()->id)->first();
+        // view()->composer('frontend.layouts.inner-header', function ($view) {
+        //     $users = User::where('id', auth()->user()->id)->first();
 
-            $view->with(compact('users',));
-        });
+        //     $view->with(compact('users',));
+        // });
     }
 }

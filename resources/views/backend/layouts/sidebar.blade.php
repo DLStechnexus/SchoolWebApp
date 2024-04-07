@@ -1,6 +1,17 @@
 <nav class="sidebar">
     <div class="logo d-flex justify-content-between">
-        <a href="{{ route('dashboard') }}"><img src="{{ asset('backend/img/logo.png') }}" alt></a>
+        @php
+            $logoSection = \App\Models\LogoSetting::first();
+        @endphp
+        @if ($logoSection)
+            <img src="{{ asset('upload/logo') }}/{{ $logoSection->logo_image }}" height="100px" width="100px"
+                alt="unipix">
+        @else
+            <a href="{{ route('dashboard') }}">
+                <img src="{{ asset('backend/img/logo.png') }}" alt></a>
+        @endif
+
+
         <div class="sidebar_close_icon d-lg-none">
             <i class="ti-close"></i>
         </div>

@@ -113,6 +113,8 @@
                                                     <select name="role_id" id="role_id" class="form-control"
                                                         style="height: 52px">
                                                         <option value="">Select Staff Type</option>
+                                                        <option value="5">Principal</option>
+                                                        <option value="6">Manager</option>
                                                         <option value="2">Teacher</option>
                                                         <option value="3">Peon</option>
                                                         <option value="4">Other</option>

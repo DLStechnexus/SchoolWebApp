@@ -217,6 +217,33 @@
                             </div>
                         </div>
                     </div>
+
+                    <h5 class="modal-title">Notice</h5>
+                    <div class="white_box mb_30">
+                        <div class="row justify-content-center">
+                            <div class="modal-content cs_modal">
+                                <div class="modal-header">
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="{{ route('notice.store') }}"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="mb-3 form-group">
+                                                    <label for="">Notice </label>
+                                                    <textarea name="notice" id="notice" cols="30" rows="10" placeholder="Write notice here..">
+                                                        {{ $noticeSection->notice ?? '' }}
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="text-center btn_1 full_width">Save</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

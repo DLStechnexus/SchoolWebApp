@@ -7,11 +7,12 @@
         <div class="container-fluid plr_30 body_white_bg pt_30">
             <div class="row justify-content-center">
                 <div class="col-12">
+                    @include('alert')
                     <div class="QA_section">
                         <div class="white_box_tittle list_header">
                             <h4>Result List</h4>
                             <div class="box_right d-flex lms_block">
-                                @include('alert')
+
                                 <div class="add_button ms-2">
                                     <a href="{{ route('result.create') }}" class="btn_1">Add New</a>
                                 </div>

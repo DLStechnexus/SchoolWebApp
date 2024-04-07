@@ -57,7 +57,7 @@
                     <div class="white_box mb_30">
                         <div class="row justify-content-center">
                             <div class="col-lg-6">
-
+                                @include('alert')
                                 <div class="modal-content cs_modal">
                                     <div class="modal-header">
                                         <h5 class="modal-title">Log in</h5>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -12,7 +13,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.dashboard');
+        $student = User::where('role_id', 1)->count();
+        $teacher = User::where('role_id', 2)->count();
+        $staff = User::whereIn('role_id', [2, 3, 4, 5, 6])->count();
+        return view('backend.pages.dashboard', compact('student', 'teacher', 'staff'));
     }
 
     /**

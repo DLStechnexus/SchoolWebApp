@@ -7,11 +7,12 @@
         <div class="container-fluid plr_30 body_white_bg pt_30">
             <div class="row justify-content-center">
                 <div class="col-12">
+                    @include('alert')
                     <div class="QA_section">
                         <div class="white_box_tittle list_header">
                             <h4>Student List</h4>
                             <div class="box_right d-flex lms_block">
-                                @include('alert')
+
                                 <div class="add_button ms-2">
                                     <a href="{{ route('student.create') }}" class="btn_1">Add New</a>
                                 </div>
@@ -40,13 +41,13 @@
                                         @foreach ($students as $key => $student)
                                             <tr>
                                                 <th>{{ $key + 1 }}</th>
-                                                <th scope="row">{{ $student->user_unique_id }}
+                                                <th scope="row">{{ $student->user_unique_id ?? '' }}
                                                 </th>
-                                                <td>{{ $student->name }}</td>
-                                                <td>{{ $student->email }}</td>
-                                                <td>{{ $student->user_details->mobile_number }}</td>
-                                                <td>{{ $student->user_details->aadhar_number }}</td>
-                                                <td>{{ $student->user_details->father_name }}</td>
+                                                <td>{{ $student->name ?? '' }}</td>
+                                                <td>{{ $student->email ?? '' }}</td>
+                                                <td>{{ $student->user_details->mobile_number ?? '' }}</td>
+                                                <td>{{ $student->user_details->aadhar_number ?? '' }}</td>
+                                                <td>{{ $student->user_details->father_name ?? '' }}</td>
 
                                                 <td>
                                                     @if ($student->status == 1)

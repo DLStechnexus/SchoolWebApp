@@ -61,7 +61,7 @@
                                 <img src="{{ asset('frontend/assets/images/icon/12.svg') }}" alt="">
                             </div>
                             <div class="desc">
-                                <p>Schools Student </p>
+                                <p>Teacher </p>
                             </div>
                         </div>
                         <div class="single-about-info">

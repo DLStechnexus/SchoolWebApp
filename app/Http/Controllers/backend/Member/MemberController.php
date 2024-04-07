@@ -13,7 +13,7 @@ class MemberController extends Controller
 {
     public function index()
     {
-        $staff_member = User::with('user_details')->whereIn('role_id', [2, 3, 4])->orderBy('id', 'desc')->get();
+        $staff_member = User::with('user_details')->whereIn('role_id', [2, 3, 4, 5, 6])->orderBy('id', 'desc')->get();
         // dd($students);
         return view('backend.pages.staff.list', compact('staff_member'));
     }
@@ -78,7 +78,7 @@ class MemberController extends Controller
      */
     public function show(string $id)
     {
-        $staff_member = User::where('id', $id)->with('user_details')->whereIn('role_id', [2, 3, 4])->first();
+        $staff_member = User::where('id', $id)->with('user_details')->whereIn('role_id', [2, 3, 4, 5, 6])->first();
         // dd($students);
         return view('backend.pages.staff.details', compact('staff_member'));
     }
@@ -87,7 +87,7 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        $staff_member = User::where('id', $id)->with('user_details')->whereIn('role_id', [2, 3, 4])->first();
+        $staff_member = User::where('id', $id)->with('user_details')->whereIn('role_id', [2, 3, 4, 5, 6])->first();
         // dd($students);
         return view('backend.pages.staff.edit', compact('staff_member'));
     }

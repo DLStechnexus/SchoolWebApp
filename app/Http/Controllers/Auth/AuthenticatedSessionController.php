@@ -30,11 +30,14 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if (Auth::check()) {
-
-            return redirect()->route('dashboard');
+            if (auth()->user()->role_id == 7) {
+                return redirect()->route('dashboard');
+            } else {
+                return redirect()->back()->with('error', 'You are not authorized to access this page');
+            }
         }
 
-        
+
         return redirect()->route('login')->with('error', 'Invalid credentials');
     }
 

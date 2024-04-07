@@ -33,7 +33,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-
+        // dd($request->all());
         DB::beginTransaction();
         try {
             $user_data = [
@@ -54,18 +54,27 @@ class StudentController extends Controller
             $user_details = [
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
-                'aadhar_number' => $request->adhar_number,
-                'mobile_number' => $request->mobile_number,
-                'profile_image' => $fileName,
-                'class_standard' => $request->class_standard,
-                'status' => 1,
+                'aadhar_number' => $request->adhar_no,
+                'mobile_number' => $request->phone,
                 'father_name' => $request->father_name,
                 'mother_name' => $request->mother_name,
-                'father_mobile_number' => $request->father_contact_no,
-                'mother_mobile_number' => $request->mother_contact_no,
+
+                'profile_image' => $fileName,
+                'class_standard' => $request->class_standard,
+                'qualification' => $request->qualification,
+                'status' => 1,
                 'address' => $request->address,
+                'date_of_birth' => $request->date_of_birth,
+                'gender' => $request->gender,
+                'category' => $request->category,
+                'pincode' => $request->pincode,
+                'district' => $request->district,
+                'religion' => $request->religion,
+                'caste' => $request->caste,
+                'blood_group' => $request->blood_group,
+                'father_occupation' => $request->father_occupation,
                 'user_id' => $user->id,
-                'created_by' => $request->created_by,
+                'created_by' => auth()->user()->id,
             ];
 
             $user_details = UserDetails::create($user_details);
@@ -147,16 +156,25 @@ class StudentController extends Controller
             $user_details = [
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
-                'aadhar_number' => $request->adhar_number,
-                'mobile_number' => $request->mobile_number,
-                'profile_image' => $fileName,
-                'status' => $request->status,
-                'class_standard' => $request->class_standard,
+                'aadhar_number' => $request->adhar_no,
+                'mobile_number' => $request->phone,
                 'father_name' => $request->father_name,
                 'mother_name' => $request->mother_name,
-                'father_mobile_number' => $request->father_contact_no,
-                'mother_mobile_number' => $request->mother_contact_no,
+
+                'profile_image' => $fileName,
+                'class_standard' => $request->class_standard,
+                'qualification' => $request->qualification,
+                'status' => $request->status,
                 'address' => $request->address,
+                'date_of_birth' => $request->date_of_birth,
+                'gender' => $request->gender,
+                'category' => $request->category,
+                'pincode' => $request->pincode,
+                'district' => $request->district,
+                'religion' => $request->religion,
+                'caste' => $request->caste,
+                'blood_group' => $request->blood_group,
+                'father_occupation' => $request->father_occupation,
                 'updated_by' => auth()->user()->id,
             ];
             $user_details = UserDetails::where('user_id', $request->user_id)->update($user_details);

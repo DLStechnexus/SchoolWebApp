@@ -26,6 +26,16 @@ return new class extends Migration
             $table->string('qualification')->nullable();
             $table->integer('status')->default(0);
             $table->string('address')->nullable();
+            $table->string('date_of_birth')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('category')->nullable();
+            $table->string('pincode')->nullable();
+            $table->string('district')->nullable();
+            $table->string('religion')->nullable();
+            $table->string('caste')->nullable();
+            $table->string('blood_group')->nullable();
+            $table->string('father_occupation')->nullable();
+
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->foreignId('created_by')->nullable()->constrained('users')->onDelete('cascade');
             $table->foreignId('updated_by')->nullable()->constrained('users')->onDelete('cascade');
