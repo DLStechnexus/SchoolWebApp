@@ -49,7 +49,7 @@
                                 @if ($manager)
                                     <img style="border: 2px solid #DEDEDE;"
                                         src="{{ asset('upload/staff') }}/{{ $manager->user_details->profile_image }}"
-                                        width="200">
+                                        width="200" height="200">
                                 @endif
 
                                 <div style="font-size: 20px; color: white;"><strong>{{ $manager->name ?? '' }}</strong>
@@ -68,7 +68,7 @@
                                                                                  @if ($principal)
                                 <img style="border: 2px solid #DEDEDE;"
                                     src="{{ asset('upload/staff') }}/{{ $principal->user_details->profile_image }}"
-                                    width="200">
+                                    width="200" height="200">
                                 @endif
                                 <div style="font-size: 20px; color: white;"><strong>{{ $principal->name ?? '' }}</strong>
                                 </div>

@@ -23,12 +23,12 @@
                         all backgrounds.
                     </p>
                     <div class="footer__widget--social">
-                        <ul class="social">
+                        {{-- <ul class="social">
                             <li class="social__link"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                             <li class="social__link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                             <li class="social__link"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                             <li class="social__link"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
@@ -70,8 +70,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="copyright__wrapper">
-                    <p>Copyright &copy; 2024 All Rights Reserved by <a href="#">Unipix</a> Design & Developed By
-                        Anshu & Teams</p>
+                    <p>Copyright &copy; 2024 All Rights Reserved by Design & Developed By
+                        R-Tech</p>
                 </div>
             </div>
         </div>
